@@ -1,11 +1,12 @@
-# Template Repo
+# Super Galactic Age Calculator
 
-#### A template development environment using node.js and NPM for ES6 vanilla Javascript projects.
+#### A calculator that returns a user's age in Mercury, Venus, Mars, and Jupiter years. It also calculates life expectancy based on a user lifestyle survey, returns how many years a user has left to on each planet, and how many years they have lived past their life expectancy on each planet if that applys.
 
 #### By Helen Lehrer
 
 ## Technologies Used
 
+* Javascript ES6
 * Node.js
 * NPM
 * babel/core: ^7.18.6
@@ -26,11 +27,7 @@
 
 ## Description
 
-Module-Bundler: webpack and webpack-cli
-
-Plugins: babel, clean-webpack, eslint-webpack-plugin, html-webpack-plugin, jest, webpack-dev-server, bootstrap, eslint
-
-Loaders: css-loader, file-loader, html-loader, style-loader
+A solar year lasts 365 days on planet Earth. However, the length of a solar year varies from planet to planet. For instance, a solar year on Mercury lasts 88 days. This is application that determines a user's age and life expectancy details based on a planet's solar years. 
 
 #### Types of configuration files in this repo:
 
@@ -42,17 +39,14 @@ Loaders: css-loader, file-loader, html-loader, style-loader
 
 This repo is compatible with Node v16.16.0 and npm v 8.11.0. 
 
-The `name` and `version` of the project at the top of `package.json` must be updated to the current project name and version.
-
-
-#### Enter this command into your terminal to install all dependencies: 
+#### Enter this command into your terminal to clone the project: 
 ```bash
-$ npm install
+$ git clone https://github.com/helen-lehrer/super-galactic-age-calculator/
 ```
 
-#### Enter this command into your terminal to build the project using webpack: 
+#### Enter this command into your terminal to install dependencies: 
 ```bash
-$ npm run build
+$ npm install
 ```
 
 #### Enter this command into your terminal to start a development server: 
