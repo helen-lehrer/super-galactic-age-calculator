@@ -31,6 +31,7 @@ export class LifeExpectancy {
     if (this.lifestyle.value === 1 | this.countryOfResidence.value === 1 | this.activityLevel.value === 1) {
       lowLifeExpectancyArray.push(1);
     }
+    /*
     if (this.lifestyle.value === 2 | this.countryOfResidence.value === 2 | this.activityLevel.value === 2) {
       mediumLifeExpectancyArray.push(2);
     }
@@ -47,6 +48,9 @@ export class LifeExpectancy {
     } else {
       return 85;
     }
-
+*/
+else {
+  return 90;
+}
   }
 }
