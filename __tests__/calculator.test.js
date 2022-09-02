@@ -1,41 +1,40 @@
-import { Age } from './../src/js/calculator.js';
+import { galacticCalculator } from './../src/js/calculator.js';
 import { LifeExpectancy } from './../src/js/calculator.js';
 
-describe('Age', () => {
-  let age;
-  let lifeExpectancy; 
+describe('galacticCalculator', () => {
+  let galacticCalculator; 
 
   beforeEach(() => {
-    age = new Age(27, 0, 0, 0, 0);
-    lifeExpectancy = new LifeExpectancy(1, 2, 3);
+    galacticCalculator = new galacticCalculator();
   });
 
-  test ('should create an age object with 5 planet properties', () => {
-    expect(age.earth).toEqual(27);
-    expect(age.mercury).toEqual(0);
-    expect(age.venus).toEqual(0);
-    expect(age.mars).toEqual(0);
-    expect(age.jupiter).toEqual(0);
+  test ('should create an galacticCalculator object with planet properties equal to empty objects', () => {
+    expect(galacticCalculator.earth).toEqual({});
+    expect(galacticCalculator.mercury).toEqual({});
+    expect(galacticCalculator.venus).toEqual({});
+    expect(galacticCalculator.mars).toEqual({});
+    expect(galacticCalculator.jupiter).toEqual({});
   });
 
   test ('should calculate planet ages', () =>
   {
     age.calculatePlanetaryAges();
-    expect(age.earth).toEqual(27);
-    expect(age.mercury).toEqual(113);
-    expect(age.venus).toEqual(44);
-    expect(age.mars).toEqual(14);
-    expect(age.jupiter).toEqual(2);
+    expect(galacticCalculator.earth).toEqual(27);
+    expect(galacticCalculator.mercury).toEqual(113);
+    expect(galacticCalculator.venus).toEqual(44);
+    expect(galacticCalculator.mars).toEqual(14);
+    expect(galacticCalculator.jupiter).toEqual(2);
   });
 
   test ('should assign key-value pairs for each property equal to how many years a user has left to live on each planet.', () => 
   {
-    age.calculateRemainingLife();
-    expect(age.earth[0]).toEqual(63);
-    expect(age.mercury[0]).toEqual(262);
-    expect(age.venus[0]).toEqual(101);
-    expect(age.mars[0]).toEqual(34);
-    expect(age.jupiter[0]).toEqual(6);
+    galacticCalculator.calculatePlanetaryAges();
+    galacticCalculator.calculateRemainingLife(90);
+    expect(galacticCalculator.earth[0]).toEqual(63);
+    expect(galacticCalculator.mercury[0]).toEqual(262);
+    expect(galacticCalculator.venus[0]).toEqual(101);
+    expect(galacticCalculator.mars[0]).toEqual(34);
+    expect(galacticCalculator.jupiter[0]).toEqual(6);
   });
 
 });

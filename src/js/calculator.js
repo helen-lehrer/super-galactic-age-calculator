@@ -1,21 +1,28 @@
-export class Age {
-  constructor(earth, mercury, venus, mars, jupiter) {
-    this.earth = earth;
-    this.mercury = mercury;
-    this.venus = venus;
-    this.mars = mars;
-    this.jupiter = jupiter;
+export class galacticCalculator {
+  constructor() {
+    this.earth = {};
+    this.mercury = {};
+    this.venus = {};
+    this.mars = {};
+    this.jupiter = {};
   }
 
-  calculatePlanetaryAges() {
-    this.mercury = Math.round(this.earth / .24);
-    this.venus = Math.round(this.earth / .62);
-    this.mars = Math.round(this.earth / 1.88);
-    this.jupiter = Math.round(this.earth / 11.86);
+  calculatePlanetaryAges(earthAge) {
+    this.earth["age"] = earthAge
+    this.mercury["age"] = Math.round(earthAge / .24);
+    this.venus["age"] = Math.round(earthAge / .62);
+    this.mars["age"] = Math.round(earthAge / 1.88);
+    this.jupiter["age"] = Math.round(earthAge / 11.86);
     return this
   }
 
-  calculateRemainingLife() {
+  calculateRemainingLife(lifeExpectancy) {
+    this.earth["remaining-life"] = lifeExpectancy - this.earth["age"];
+    this.mercury["remaining-life"] = (lifeExpectancy / .24) - this.mercury["age"];
+    this.venus["remaining-life"] = (lifeExpectancy / .62) - this.venus["age"];
+    this.mars["remaining-life"] = (lifeExpectancy / 1.88) - this.mars["age"];
+    this.jupiter["remaining-life"] = (lifeExpectancy / 11.86) - this.jupiter["age"];
+    return this
   }
   
 }
