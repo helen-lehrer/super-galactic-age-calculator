@@ -6,4 +6,8 @@ export class Age {
     this.mars = mars;
     this.jupiter = jupiter;
   }
+
+  calculatePlanetaryAges() {
+    
+  }
 }
