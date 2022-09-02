@@ -1,11 +1,11 @@
-import { galacticCalculator } from './../src/js/calculator.js';
+import { age } from './../src/js/calculator.js';
 import { LifeExpectancy } from './../src/js/calculator.js';
 
 describe('galacticCalculator', () => {
   let galacticCalculator; 
 
   beforeEach(() => {
-    galacticCalculator = new galacticCalculator();
+    galacticCalculator = new age();
   });
 
   test ('should create an galacticCalculator object with planet properties equal to empty objects', () => {
@@ -18,23 +18,23 @@ describe('galacticCalculator', () => {
 
   test ('should calculate planet ages', () =>
   {
-    age.calculatePlanetaryAges();
-    expect(galacticCalculator.earth).toEqual(27);
-    expect(galacticCalculator.mercury).toEqual(113);
-    expect(galacticCalculator.venus).toEqual(44);
-    expect(galacticCalculator.mars).toEqual(14);
-    expect(galacticCalculator.jupiter).toEqual(2);
+    galacticCalculator.calculatePlanetaryAges(27);
+    expect(galacticCalculator.earth["age"]).toEqual(27);
+    expect(galacticCalculator.mercury["age"]).toEqual(113);
+    expect(galacticCalculator.venus["age"]).toEqual(44);
+    expect(galacticCalculator.mars["age"]).toEqual(14);
+    expect(galacticCalculator.jupiter["age"]).toEqual(2);
   });
 
   test ('should assign key-value pairs for each property equal to how many years a user has left to live on each planet.', () => 
   {
-    galacticCalculator.calculatePlanetaryAges();
+    galacticCalculator.calculatePlanetaryAges(27);
     galacticCalculator.calculateRemainingLife(90);
-    expect(galacticCalculator.earth[0]).toEqual(63);
-    expect(galacticCalculator.mercury[0]).toEqual(262);
-    expect(galacticCalculator.venus[0]).toEqual(101);
-    expect(galacticCalculator.mars[0]).toEqual(34);
-    expect(galacticCalculator.jupiter[0]).toEqual(6);
+    expect(galacticCalculator.earth["remaining-life"]).toEqual(63);
+    expect(galacticCalculator.mercury["remaining-life"]).toEqual(262);
+    expect(galacticCalculator.venus["remaining-life"]).toEqual(101);
+    expect(galacticCalculator.mars["remaining-life"]).toEqual(34);
+    expect(galacticCalculator.jupiter["remaining-life"]).toEqual(6);
   });
 
 });

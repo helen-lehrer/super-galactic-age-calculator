@@ -1,4 +1,4 @@
-export class galacticCalculator {
+export class age {
   constructor() {
     this.earth = {};
     this.mercury = {};
@@ -17,11 +17,11 @@ export class galacticCalculator {
   }
 
   calculateRemainingLife(lifeExpectancy) {
-    this.earth["remaining-life"] = lifeExpectancy - this.earth["age"];
-    this.mercury["remaining-life"] = (lifeExpectancy / .24) - this.mercury["age"];
-    this.venus["remaining-life"] = (lifeExpectancy / .62) - this.venus["age"];
-    this.mars["remaining-life"] = (lifeExpectancy / 1.88) - this.mars["age"];
-    this.jupiter["remaining-life"] = (lifeExpectancy / 11.86) - this.jupiter["age"];
+    this.earth["remaining-life"] = Math.round(lifeExpectancy - this.earth["age"]);
+    this.mercury["remaining-life"] = Math.round((lifeExpectancy / .24) - this.mercury["age"]);
+    this.venus["remaining-life"] = Math.round((lifeExpectancy / .62) - this.venus["age"]);
+    this.mars["remaining-life"] = Math.round((lifeExpectancy / 1.88) - this.mars["age"]);
+    this.jupiter["remaining-life"] = Math.round((lifeExpectancy / 11.86) - this.jupiter["age"]);
     return this
   }
   
