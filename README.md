@@ -1,6 +1,6 @@
 # Super Galactic Age Calculator
 
-#### A calculator that returns a user's age in Mercury, Venus, Mars, and Jupiter years. It also calculates life expectancy based on a user lifestyle survey, returns how many years a user has left to on each planet, and how many years they have lived past their life expectancy on each planet if that applys.
+#### A calculator that returns a user's age in Mercury, Venus, Mars, and Jupiter years. It also calculates life expectancy based on a user lifestyle survey, returns how many years a user has left on each planet, and how many years they have lived past their life expectancy per planet (if that applys).
 
 #### By Helen Lehrer
 
@@ -50,11 +50,6 @@ $ npm install
 ```
 
 #### Enter this command into your terminal to start a development server: 
-```bash
-$ npm run start
-```
-
-#### Enter this command into your terminal to lint all JS files that are in your src folder: 
 ```bash
 $ npm run start
 ```
