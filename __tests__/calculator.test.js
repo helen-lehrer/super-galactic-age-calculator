@@ -3,9 +3,11 @@ import { LifeExpectancy } from './../src/js/calculator.js';
 
 describe('Age', () => {
   let age;
+  let lifeExpectancy; 
 
   beforeEach(() => {
     age = new Age(27, 0, 0, 0, 0);
+    lifeExpectancy = new LifeExpectancy(1, 2, 3);
   });
 
   test ('should create an age object with 5 planet properties', () => {
@@ -24,7 +26,16 @@ describe('Age', () => {
     expect(age.venus).toEqual(44);
     expect(age.mars).toEqual(14);
     expect(age.jupiter).toEqual(2);
+  });
 
+  test ('should assign key-value pairs for each property equal to how many years a user has left to live on each planet.', () => 
+  {
+    age.calculateRemainingLife();
+    expect(age.earth[0]).toEqual(63);
+    expect(age.mercury[0]).toEqual(262);
+    expect(age.venus[0]).toEqual(101);
+    expect(age.mars[0]).toEqual(34);
+    expect(age.jupiter[0]).toEqual(6);
   });
 
 });

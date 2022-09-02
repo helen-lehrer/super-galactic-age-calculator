@@ -14,6 +14,10 @@ export class Age {
     this.jupiter = Math.round(this.earth / 11.86);
     return this
   }
+
+  calculateRemainingLife() {
+  }
+  
 }
 
 export class LifeExpectancy {
@@ -69,3 +73,10 @@ export class LifeExpectancy {
       }
   }
 }
+
+/*expect(age.earth[0]).toEqual(lifeExpectancy.calculateLifeExpectancy() - age.earth);
+    expect(age.mercury[0]).toEqual((lifeExpectancy.calculateLifeExpectancy()) - age.mercury);
+    expect(age.venus[0]).toEqual((lifeExpectancy.calculateLifeExpectancy()) - age.venus);
+    expect(age.mars[0]).toEqual((lifeExpectancy.calculateLifeExpectancy()) - age.mars);
+    expect(age.jupiter[0]).toEqual((lifeExpectancy.calculateLifeExpectancy()) - age.jupiter);
+    */
