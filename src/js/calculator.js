@@ -27,13 +27,21 @@ export class LifeExpectancy {
     let lowLifeExpectancyArray = [];
     let mediumLifeExpectancyArray = [];
     let highLifeExpectancyArray = [];
-
-    if (this.lifestyle.value === 1 | this.countryOfResidence.value === 1 | this.activityLevel.value === 1) {
+/*
+    if (this.lifestyle === 1 | this.countryOfResidence === 1 | this.activityLevel === 1) {
       lowLifeExpectancyArray.push(1);
-    }
-    if (this.lifestyle.value === 2 | this.countryOfResidence.value === 2 | this.activityLevel.value === 2) {
+    }*/
+    
+    if (this.lifestyle === 2) {
       mediumLifeExpectancyArray.push(2);
     }
+    if (this.countryOfResidence === 2) {
+      mediumLifeExpectancyArray.push(2);
+    }
+    if (this.activityLevel === 2) {
+      mediumLifeExpectancyArray.push(2);
+    } 
+    /*
     if (this.lifestyle.value === 3 | this.countryOfResidence.value === 3 | this.activityLevel.value === 3) {
       highLifeExpectancyArray.push(3)
     }
@@ -47,6 +55,12 @@ export class LifeExpectancy {
     } else {
       return 85;
     }
-
-  }
+*/
+if (mediumLifeExpectancyArray.length >= 2) {
+  return 85;
+} else {
+  return 90;
+}
+  
+}
 }
