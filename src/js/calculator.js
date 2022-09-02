@@ -27,11 +27,16 @@ export class LifeExpectancy {
     let lowLifeExpectancyArray = [];
     let mediumLifeExpectancyArray = [];
     let highLifeExpectancyArray = [];
-/*
-    if (this.lifestyle === 1 | this.countryOfResidence === 1 | this.activityLevel === 1) {
-      lowLifeExpectancyArray.push(1);
 
-    }*/
+    if (this.lifestyle === 1) {
+      lowLifeExpectancyArray.push(1);
+    }
+    if (this.countryOfResidence === 1) {
+      lowLifeExpectancyArray.push(1);
+    }
+    if (this.activityLevel === 1) {
+      lowLifeExpectancyArray.push(1);
+    }
     
     if (this.lifestyle === 2) {
       mediumLifeExpectancyArray.push(2);
@@ -70,6 +75,8 @@ export class LifeExpectancy {
 */
 if (mediumLifeExpectancyArray.length >= 2) {
   return 85;
+} else if (lowLifeExpectancyArray.length >= 2) {
+  return 70;
 } else {
   return 90;
   }
