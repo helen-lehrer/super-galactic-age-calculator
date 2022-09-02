@@ -41,6 +41,7 @@ export class LifeExpectancy {
     if (this.activityLevel === 2) {
       mediumLifeExpectancyArray.push(2);
     } 
+    
     /*
     if (this.lifestyle.value === 3 | this.countryOfResidence.value === 3 | this.activityLevel.value === 3) {
       highLifeExpectancyArray.push(3)
