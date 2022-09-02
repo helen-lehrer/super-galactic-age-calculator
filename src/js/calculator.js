@@ -14,11 +14,12 @@ export class Age {
     this.jupiter = Math.round(this.earth / 11.86);
     return this
   }
-
 }
 
 export class LifeExpectancy {
-  constructor() {
-    
+  constructor(lifestyle, countryOfResidence, activityLevel) {
+    this.lifestyle = lifestyle;
+    this.countryOfResidence = countryOfResidence;
+    this.activityLevel = activityLevel;
   }
 }

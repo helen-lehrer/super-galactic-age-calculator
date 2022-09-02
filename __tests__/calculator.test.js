@@ -42,4 +42,4 @@ describe('LifeExpectancy', () => {
     expect(lifeExpectancy.activityLevel).toEqual(3);
   });
 
-})
+});
