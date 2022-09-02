@@ -35,11 +35,16 @@ describe('LifeExpectancy', () => {
   beforeEach(() => { 
     lifeExpectancy = new LifeExpectancy(1, 2, 3);
   });
+  
 
   test('should create a life expectancy object with demographic properties', () => {
     expect(lifeExpectancy.lifestyle).toEqual(1);
     expect(lifeExpectancy.countryOfResidence).toEqual(2);
     expect(lifeExpectancy.activityLevel).toEqual(3);
+  });
+
+  test('should calculate a persons life expectancy on planet earth based on lifeExpectancy property values', () => {
+    expect(lifeExpectancy.calculateLifeExpectancy()).toEqual(100);
   });
 
 });

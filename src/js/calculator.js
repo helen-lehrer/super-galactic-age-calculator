@@ -22,4 +22,8 @@ export class LifeExpectancy {
     this.countryOfResidence = countryOfResidence;
     this.activityLevel = activityLevel;
   }
+
+  calculateLifeExpectancy() {
+    
+  }
 }
