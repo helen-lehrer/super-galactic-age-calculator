@@ -37,10 +37,10 @@ describe('galacticCalculator', () => {
     expect(galacticCalculator.jupiter["remaining-life"]).toEqual(6);
   });
 
-  test ('should return years lived past life expectancy', () => 
+  test ('should return years lived past earth life expectancy', () => 
   {
     galacticCalculator.calculatePlanetaryAges(100);
-    expect(galacticCalculator.calculateRemainingLife(90)).toEqual("You have lived 10 earth year(s) past your life expectancy!");
+    expect(galacticCalculator.calculateRemainingLife(90)).toEqual(["You have lived 10 earth year(s) past your life expectancy!", "You have lived 42 mercury year(s) past your life expectancy!"]);
   });
 
 });
