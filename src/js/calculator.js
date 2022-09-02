@@ -27,11 +27,10 @@ export class GalacticCalculator {
     this.mars["remaining-life"] = marsLifeExpectancy - this.mars["age"];
     this.jupiter["remaining-life"] = jupiterLifeExpectancy - this.jupiter["age"];
 
-    /*
     if (this.earth["age"] > lifeExpectancy) {
-      return "You have lived" + (this.earth["age"] - lifeExpectancy).toString() + "earth year(s) past your life expectancy!"
+      return "You have lived " + (this.earth["age"] - lifeExpectancy) + " earth year(s) past your life expectancy!"
     } 
-    
+    /*
     if (this.mercury["age"] > mercuryLifeExpectancy) {
       return "You have lived" + (this.mercury["age"] - mercurylifeExpectancy) + "year(s) past your life expectancy!"
     }
