@@ -43,13 +43,18 @@ describe('LifeExpectancy', () => {
     expect(lifeExpectancy.activityLevel).toEqual(3);
   });
 
-  test('should calculate a persons life expectancy on planet earth as 85(medium) based on lifeExpectancy property values', () => {
+  test('should calculate a persons life expectancy on planet earth as 90 based on lifeExpectancy property values', () => {
     expect(lifeExpectancy.calculateLifeExpectancy()).toEqual(90);
   });
 
   test('should calculate a persons life expectancy on planet earth as 85(medium) based on lifeExpectancy property values', () => {
     let lifeExpectancy = new LifeExpectancy(2, 2, 1);
     expect(lifeExpectancy.calculateLifeExpectancy()).toEqual(85);
+  });
+
+  test('should calculate a persons life expectancy on planet earth as 70(low) based on lifeExpectancy property values', () => {
+    let lifeExpectancy = new LifeExpectancy(1, 2, 1);
+    expect(lifeExpectancy.calculateLifeExpectancy()).toEqual(70);
   });
 
 });
