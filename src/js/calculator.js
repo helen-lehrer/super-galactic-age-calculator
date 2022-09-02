@@ -29,24 +29,21 @@ export class GalacticCalculator {
 
     let answerArray = [];
     if (this.earth["age"] > lifeExpectancy) {
-      answerArray.push("You have lived " + (this.earth["age"] - lifeExpectancy) + " earth year(s) past your life expectancy!")
+      answerArray.push("You have lived " + (this.earth["age"] - lifeExpectancy) + " Earth year(s) past your life expectancy!")
     } 
-    
     if (this.mercury["age"] > mercuryLifeExpectancy) {
-      answerArray.push("You have lived " + (this.mercury["age"] - mercuryLifeExpectancy) + " mercury year(s) past your life expectancy!")
+      answerArray.push("You have lived " + (this.mercury["age"] - mercuryLifeExpectancy) + " Mercury year(s) past your life expectancy!")
     }
-    return answerArray
-    /*
     if (this.venus["age"] > venusLifeExpectancy) {
-      return "You have lived" + (this.venus["age"] - venuslifeExpectancy) + "year(s) past your life expectancy!"
+      answerArray.push("You have lived " + (this.venus["age"] - venusLifeExpectancy) + " Venus year(s) past your life expectancy!")
     }
     if (this.mars["age"] > marsLifeExpectancy) {
-      return "You have lived" + (this.mars["age"] - marslifeExpectancy) + "year(s) past your life expectancy!"
+      answerArray.push("You have lived " + (this.mars["age"] - marsLifeExpectancy) + " Mars year(s) past your life expectancy!")
     }
     if (this.jupiter["age"] > jupiterLifeExpectancy) {
-      return "You have lived" + (this.jupiter["age"] - jupiterlifeExpectancy) + "year(s) past your life expectancy!"
-    } 
-  */
+      answerArray.push("You have lived " + (this.jupiter["age"] - jupiterLifeExpectancy) + " Jupiter year(s) past your life expectancy!")
+    }
+    return answerArray
   }
 }
 
