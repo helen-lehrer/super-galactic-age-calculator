@@ -8,10 +8,17 @@ export class Age {
   }
 
   calculatePlanetaryAges() {
-    this.mercury = Math.round(this.mercury + (this.earth / .24));
-    this.venus = Math.round(this.venus + (this.earth / .62));
-    this.mars = Math.round(this.mars + (this.earth / 1.88));
-    this.jupiter = Math.round(this.jupiter + (this.earth / 11.86));
+    this.mercury = Math.round(this.earth / .24);
+    this.venus = Math.round(this.earth / .62);
+    this.mars = Math.round(this.earth / 1.88);
+    this.jupiter = Math.round(this.earth / 11.86);
     return this
+  }
+
+}
+
+export class LifeExpectancy {
+  constructor() {
+    
   }
 }

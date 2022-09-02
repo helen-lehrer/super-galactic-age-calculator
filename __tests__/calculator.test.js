@@ -1,4 +1,5 @@
 import { Age } from './../src/js/calculator.js';
+import { LifeExpectancy } from './../src/js/calculator.js';
 
 describe('Age', () => {
   let age;
@@ -27,3 +28,18 @@ describe('Age', () => {
   });
 
 });
+
+describe('LifeExpectancy', () => {
+  let lifeExpectancy; 
+  
+  beforeEach(() => { 
+    lifeExpectancy = new LifeExpectancy(1, 2, 3);
+  });
+
+  test('should create a life expectancy object with demographic properties', () => {
+    expect(lifeExpectancy.lifestyle).toEqual(1);
+    expect(lifeExpectancy.countryOfResidence).toEqual(2);
+    expect(lifeExpectancy.activityLevel).toEqual(3);
+  });
+
+})
