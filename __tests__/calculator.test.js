@@ -1,11 +1,11 @@
-import { age } from './../src/js/calculator.js';
+import { GalacticCalculator } from './../src/js/calculator.js';
 import { LifeExpectancy } from './../src/js/calculator.js';
 
 describe('galacticCalculator', () => {
   let galacticCalculator; 
 
   beforeEach(() => {
-    galacticCalculator = new age();
+    galacticCalculator = new GalacticCalculator();
   });
 
   test ('should create an galacticCalculator object with planet properties equal to empty objects', () => {
@@ -35,6 +35,12 @@ describe('galacticCalculator', () => {
     expect(galacticCalculator.venus["remaining-life"]).toEqual(101);
     expect(galacticCalculator.mars["remaining-life"]).toEqual(34);
     expect(galacticCalculator.jupiter["remaining-life"]).toEqual(6);
+  });
+
+  test ('should return years lived past life expectancy', () => 
+  {
+    galacticCalculator.calculatePlanetaryAges(100);
+    expect(galacticCalculator.calculateRemainingLife(90)).toEqual("You have lived 10 earth year(s) past your life expectancy!");
   });
 
 });

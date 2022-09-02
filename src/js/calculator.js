@@ -1,4 +1,4 @@
-export class age {
+export class GalacticCalculator {
   constructor() {
     this.earth = {};
     this.mercury = {};
@@ -17,14 +17,35 @@ export class age {
   }
 
   calculateRemainingLife(lifeExpectancy) {
+    let mercuryLifeExpectancy = Math.round(lifeExpectancy / .24);
+    let venusLifeExpectancy = Math.round(lifeExpectancy / .62);
+    let marsLifeExpectancy = Math.round(lifeExpectancy / 1.88);
+    let jupiterLifeExpectancy = Math.round(lifeExpectancy / 11.86);
     this.earth["remaining-life"] = Math.round(lifeExpectancy - this.earth["age"]);
-    this.mercury["remaining-life"] = Math.round((lifeExpectancy / .24) - this.mercury["age"]);
-    this.venus["remaining-life"] = Math.round((lifeExpectancy / .62) - this.venus["age"]);
-    this.mars["remaining-life"] = Math.round((lifeExpectancy / 1.88) - this.mars["age"]);
-    this.jupiter["remaining-life"] = Math.round((lifeExpectancy / 11.86) - this.jupiter["age"]);
-    return this
+    this.mercury["remaining-life"] = mercuryLifeExpectancy - this.mercury["age"];
+    this.venus["remaining-life"] =  venusLifeExpectancy - this.venus["age"];
+    this.mars["remaining-life"] = marsLifeExpectancy - this.mars["age"];
+    this.jupiter["remaining-life"] = jupiterLifeExpectancy - this.jupiter["age"];
+
+    /*
+    if (this.earth["age"] > lifeExpectancy) {
+      return "You have lived" + (this.earth["age"] - lifeExpectancy).toString() + "earth year(s) past your life expectancy!"
+    } 
+    
+    if (this.mercury["age"] > mercuryLifeExpectancy) {
+      return "You have lived" + (this.mercury["age"] - mercurylifeExpectancy) + "year(s) past your life expectancy!"
+    }
+    if (this.venus["age"] > venusLifeExpectancy) {
+      return "You have lived" + (this.venus["age"] - venuslifeExpectancy) + "year(s) past your life expectancy!"
+    }
+    if (this.mars["age"] > marsLifeExpectancy) {
+      return "You have lived" + (this.mars["age"] - marslifeExpectancy) + "year(s) past your life expectancy!"
+    }
+    if (this.jupiter["age"] > jupiterLifeExpectancy) {
+      return "You have lived" + (this.jupiter["age"] - jupiterlifeExpectancy) + "year(s) past your life expectancy!"
+    } 
+  */
   }
-  
 }
 
 export class LifeExpectancy {
@@ -80,10 +101,3 @@ export class LifeExpectancy {
       }
   }
 }
-
-/*expect(age.earth[0]).toEqual(lifeExpectancy.calculateLifeExpectancy() - age.earth);
-    expect(age.mercury[0]).toEqual((lifeExpectancy.calculateLifeExpectancy()) - age.mercury);
-    expect(age.venus[0]).toEqual((lifeExpectancy.calculateLifeExpectancy()) - age.venus);
-    expect(age.mars[0]).toEqual((lifeExpectancy.calculateLifeExpectancy()) - age.mars);
-    expect(age.jupiter[0]).toEqual((lifeExpectancy.calculateLifeExpectancy()) - age.jupiter);
-    */
