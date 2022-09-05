@@ -8,12 +8,12 @@ export class GalacticCalculator {
   }
 
   calculatePlanetaryAges(earthAge) {
-    this.earth["age"] = earthAge
+    this.earth["age"] = earthAge;
     this.mercury["age"] = Math.round(earthAge / .24);
     this.venus["age"] = Math.round(earthAge / .62);
     this.mars["age"] = Math.round(earthAge / 1.88);
     this.jupiter["age"] = Math.round(earthAge / 11.86);
-    return this
+    return this;
   }
 
   calculateRemainingLife(lifeExpectancyResults) {
@@ -28,22 +28,25 @@ export class GalacticCalculator {
     this.jupiter["remaining-life"] = jupiterLifeExpectancy - this.jupiter["age"];
 
     let answerArray = [];
-    if (this.earth["age"] > lifeExpectancy) {
-      answerArray.push("You have lived " + (this.earth["age"] - lifeExpectancy) + " Earth year(s) past your life expectancy!")
+    if (this.earth["age"] > lifeExpectancyResults) {
+      answerArray.push("You have lived " + (this.earth["age"] - lifeExpectancyResults) + " Earth year(s) past your life expectancy! ");
     } 
     if (this.mercury["age"] > mercuryLifeExpectancy) {
-      answerArray.push("You have lived " + (this.mercury["age"] - mercuryLifeExpectancy) + " Mercury year(s) past your life expectancy!")
+      answerArray.push("You have lived " + (this.mercury["age"] - mercuryLifeExpectancy) + " Mercury year(s) past your life expectancy! ");
     }
     if (this.venus["age"] > venusLifeExpectancy) {
-      answerArray.push("You have lived " + (this.venus["age"] - venusLifeExpectancy) + " Venus year(s) past your life expectancy!")
+      answerArray.push("You have lived " + (this.venus["age"] - venusLifeExpectancy) + " Venus year(s) past your life expectancy! ");
     }
     if (this.mars["age"] > marsLifeExpectancy) {
-      answerArray.push("You have lived " + (this.mars["age"] - marsLifeExpectancy) + " Mars year(s) past your life expectancy!")
+      answerArray.push("You have lived " + (this.mars["age"] - marsLifeExpectancy) + " Mars year(s) past your life expectancy! ");
     }
     if (this.jupiter["age"] > jupiterLifeExpectancy) {
-      answerArray.push("You have lived " + (this.jupiter["age"] - jupiterLifeExpectancy) + " Jupiter year(s) past your life expectancy!")
+      answerArray.push("You have lived " + (this.jupiter["age"] - jupiterLifeExpectancy) + " Jupiter year(s) past your life expectancy! ");
+    } 
+    if (!(this.earth["age"] > lifeExpectancyResults) & !(this.mercury["age"] > mercuryLifeExpectancy) & !(this.venus["age"] > venusLifeExpectancy) & !(this.mars["age"] > marsLifeExpectancy) & !(this.jupiter["age"] > jupiterLifeExpectancy)) {
+      answerArray.push("You have not yet reached your life expectancy on any planet. ");
     }
-    return answerArray
+    return answerArray;
   }
 }
 
@@ -97,6 +100,6 @@ export class LifeExpectancy {
       return 100;
     } else {
       return 90;
-      }
+    }
   }
 }
