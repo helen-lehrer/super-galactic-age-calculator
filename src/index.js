@@ -3,9 +3,9 @@ import { LifeExpectancy } from './js/calculator.js';
 import './css/styles.css';
 
 const lifeExpectancyResults = () => {
-  let countryOfResidence = document.getElementById("country-select");
-  let lifestyle = document.querySelector("input[name=lifestyle-input]:checked");
-  let activityLevel = document.querySelector("input[name=activity-input]:checked");
+  let countryOfResidence = parseInt(document.getElementById("country-select").value);
+  let lifestyle = parseInt(document.querySelector("input[name=lifestyle-input]:checked").value);
+  let activityLevel = parseInt(document.querySelector("input[name=activity-input]:checked").value);
   let lifeExpectancy = new LifeExpectancy (lifestyle, countryOfResidence, activityLevel);
   let lifeExpectancyResult = lifeExpectancy.calculateLifeExpectancy();
   return lifeExpectancyResult;
@@ -28,16 +28,23 @@ const galacticCalculation = (lifeExpectancyResults) => {
   jupiterAge.innerText = galacticCalculator.jupiter["age"];
 
   let answerArray = galacticCalculator.calculateRemainingLife(lifeExpectancyResults);
+  let earthLifeExpectancy = document.getElementById("earthLifeExpectancy");
+  let mercuryLifeExpectancy = document.getElementById("mercuryLifeExpectancy");
+  let venusLifeExpectancy = document.getElementById("venusLifeExpectancy");
+  let marsLifeExpectancy = document.getElementById("marsLifeExpectancy");
+  let jupiterLifeExpectancy = document.getElementById("jupiterLifeExpectancy");
+  earthLifeExpectancy.innerText = galacticCalculator.earth["life-expectancy"];
+  mercuryLifeExpectancy.innerText = galacticCalculator.mercury["life-expectancy"];
+  venusLifeExpectancy.innerText = galacticCalculator.venus["life-expectancy"];
+  marsLifeExpectancy.innerText = galacticCalculator.mars["life-expectancy"];
+  jupiterLifeExpectancy.innerText = galacticCalculator.jupiter["life-expectancy"];
   let surveyAnswers = document.getElementById("survey-answers");
   answerArray.map(function(answer) {
     surveyAnswers.append(answer);
   });
-
   return answerArray;
-  
 };
 
-//need to publish results next
 const handleFormSubmission = (event) => {
   event.preventDefault();
   const span = document.querySelectorAll("span");

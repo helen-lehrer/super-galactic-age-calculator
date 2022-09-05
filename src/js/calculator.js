@@ -21,6 +21,11 @@ export class GalacticCalculator {
     let venusLifeExpectancy = Math.round(lifeExpectancyResults / .62);
     let marsLifeExpectancy = Math.round(lifeExpectancyResults / 1.88);
     let jupiterLifeExpectancy = Math.round(lifeExpectancyResults / 11.86);
+    this.earth["life-expectancy"] = lifeExpectancyResults;
+    this.mercury["life-expectancy"] = mercuryLifeExpectancy;
+    this.venus["life-expectancy"] = venusLifeExpectancy;
+    this.mars["life-expectancy"] = marsLifeExpectancy;
+    this.jupiter["life-expectancy"] = jupiterLifeExpectancy;
     this.earth["remaining-life"] = Math.round(lifeExpectancyResults - this.earth["age"]);
     this.mercury["remaining-life"] = mercuryLifeExpectancy - this.mercury["age"];
     this.venus["remaining-life"] =  venusLifeExpectancy - this.venus["age"];
