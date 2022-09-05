@@ -1,6 +1,9 @@
 import { GalacticCalculator } from './js/calculator.js';
 import { LifeExpectancy } from './js/calculator.js';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
+
 
 const lifeExpectancyResults = () => {
   let countryOfResidence = parseInt(document.getElementById("country-select").value);

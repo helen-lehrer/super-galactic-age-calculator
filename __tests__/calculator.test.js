@@ -40,7 +40,7 @@ describe('galacticCalculator', () => {
   test ('should return an array with years lived past Earth, Mercury, Venus, Jupiter, and Mars life expectancy', () => 
   {
     galacticCalculator.calculatePlanetaryAges(500);
-    expect(galacticCalculator.calculateRemainingLife(75)).toEqual(["You have lived 425 Earth year(s) past your life expectancy!", "You have lived 1770 Mercury year(s) past your life expectancy!",  "You have lived 685 Venus year(s) past your life expectancy!", "You have lived 226 Mars year(s) past your life expectancy!", "You have lived 36 Jupiter year(s) past your life expectancy!"]);
+    expect(galacticCalculator.calculateRemainingLife(75)).toEqual(["You have lived 425 year(s) past your life expectancy on Earth! ", "You have lived 1770 year(s) past your life expectancy on Mercury! ",  "You have lived 685 year(s) past your life expectancy on Venus! ", "You have lived 226 year(s) past your life expectancy on Mars! ", "You have lived 36 year(s) past your life expectancy on Jupiter! "]);
   });
 
 });

@@ -34,22 +34,22 @@ export class GalacticCalculator {
 
     let answerArray = [];
     if (this.earth["age"] > lifeExpectancyResults) {
-      answerArray.push("You have lived " + (this.earth["age"] - lifeExpectancyResults) + " Earth year(s) past your life expectancy! ");
+      answerArray.push("You have lived " + (this.earth["age"] - lifeExpectancyResults) + " year(s) past your life expectancy on Earth! ");
     } 
     if (this.mercury["age"] > mercuryLifeExpectancy) {
-      answerArray.push("You have lived " + (this.mercury["age"] - mercuryLifeExpectancy) + " Mercury year(s) past your life expectancy! ");
+      answerArray.push("You have lived " + (this.mercury["age"] - mercuryLifeExpectancy) + " year(s) past your life expectancy on Mercury! ");
     }
     if (this.venus["age"] > venusLifeExpectancy) {
-      answerArray.push("You have lived " + (this.venus["age"] - venusLifeExpectancy) + " Venus year(s) past your life expectancy! ");
+      answerArray.push("You have lived " + (this.venus["age"] - venusLifeExpectancy) + " year(s) past your life expectancy on Venus! ");
     }
     if (this.mars["age"] > marsLifeExpectancy) {
-      answerArray.push("You have lived " + (this.mars["age"] - marsLifeExpectancy) + " Mars year(s) past your life expectancy! ");
+      answerArray.push("You have lived " + (this.mars["age"] - marsLifeExpectancy) + " year(s) past your life expectancy on Mars! ");
     }
     if (this.jupiter["age"] > jupiterLifeExpectancy) {
-      answerArray.push("You have lived " + (this.jupiter["age"] - jupiterLifeExpectancy) + " Jupiter year(s) past your life expectancy! ");
+      answerArray.push("You have lived " + (this.jupiter["age"] - jupiterLifeExpectancy) + " year(s) past your life expectancy on Jupiter! ");
     } 
     if (!(this.earth["age"] > lifeExpectancyResults) & !(this.mercury["age"] > mercuryLifeExpectancy) & !(this.venus["age"] > venusLifeExpectancy) & !(this.mars["age"] > marsLifeExpectancy) & !(this.jupiter["age"] > jupiterLifeExpectancy)) {
-      answerArray.push("You have not yet reached your life expectancy on any planet. ");
+      answerArray.push("You have not yet reached your life expectancy on any planet! ");
     }
     return answerArray;
   }
