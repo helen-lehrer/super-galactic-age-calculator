@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://helen-lehrer.github.io/super-galactic-age-calculator",
+  
   "scripts": {
     "build": "webpack --mode=development",
     "start": "npm run build && webpack-dev-server --open --mode=development",
     "lint": "eslint src/*.js",
-    "test": "jest --runInBand --colors --coverage"
+    "test": "jest --runInBand --colors --coverage",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +33,12 @@
   },
   "dependencies": {
     "bootstrap": "^5.2.0",
-    "eslint": "^8.23.0"
+    "eslint": "^8.23.0",
+    "gh-pages": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helen-lehrer/super-galactic-age-calculator.git"
   }
+
 }
