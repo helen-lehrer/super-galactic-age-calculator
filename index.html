@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lan="en-US">
+  <head>
+    <title>Super Galactic Age Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Super Galactic Calculator</h1>
+      <form id="calculator">
+        <label for="age-input">What is your age on Earth?</label>
+        <input id="age-input" type="number">
+        <label for="country-select">Select your country of residence</label>
+        <select id="country-select" name="countries">
+          <option selected>--Countries--</option>
+          <option value="2">USA</option>
+          <option value="2">Australia</option>
+          <option value="3">Hong Kong</option>
+          <option value="3">Japan</option>
+          <option value="2">Canada</option>
+          <option value="1">Italy</option>
+          <option value="1">England</option>
+          <option value="3">Finland</option>
+          <option value="3">Figi</option>
+          <option value="2">Brazil</option>
+          <option value="1">India</option>
+          <option value="2">other</option>
+        </select><br>
+        <label for="country-residence">Choose one that best matches your lifestyle:</label><br>
+        <label for="lifestyle-corporate"></label>
+        <input id="lifestyle-corporate" type="radio" name="lifestyle-input" value="1">Corporate<br>
+        <label for="lifestyle-urban"></label>
+        <input id="lifestyle-urban" type="radio" name="lifestyle-input" value="1">Urban<br>
+        <label for="lifestyle-nomadic"></label>
+        <input id="lifestyle-nomadic" type="radio" name="lifestyle-input" value="2">Nomadic<br>
+        <label for="lifestyle-beach"></label>
+        <input id="lifestyle-beach" type="radio" name="lifestyle-input" value="2">Beach Bum<br>
+        <label for="lifestyle-mountain"></label>
+        <input id="lifestyle-mountain" type="radio" name="lifestyle-input" value="3">Mountain Hiker<br>
+        <label for="lifestyle-rural"></label>
+        <input id="lifestyle-rural" type="radio" name="lifestyle-input" value="3">Rural<br>
+        <label for="activity-level">Choose one that best matches your physical activity level:</label><br>
+        <label for="activity-low"></label>
+        <input id="activity-low" type="radio" name="activity-input" value="1">Low<br>
+        <label for="activity-medium"></label>
+        <input id="activity-medium" type="radio" name="activity-input" value="2">Medium<br>
+        <label for="activity-high"></label>
+        <input id="activity-high" type="radio" name="activity-input" value="3">High<br>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="answers" class="hidden">
+        <p>
+          On Earth, your age is <span id="earthAge"></span> and your life expectancy is <span id="earthLifeExpectancy"></span>.
+        </p>
+        <p>
+          On Mercury, your age is <span id="mercuryAge"></span> and your life expectancy is <span id="mercuryLifeExpectancy"></span>.
+        </p>
+        <p>
+          On Venus, your age is <span id="venusAge"></span> and your life expectancy is <span id="venusLifeExpectancy"></span>.
+        </p>
+        <p>
+          On Mars, your age is <span id="marsAge"></span> and your life expectancy is <span id="marsLifeExpectancy"></span>.
+        </p>
+        <p>
+          On Jupiter, your age is <span id="jupiterAge"></span> and your life expectancy is <span id="jupiterLifeExpectancy"></span>.
+        </p>
+        <p>
+          <span id="survey-answers"></span>
+        </p>
+      </div>
+    </div>
+  <script defer src="bundle.js"></script></body>
+</html>
