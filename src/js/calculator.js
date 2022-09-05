@@ -16,12 +16,12 @@ export class GalacticCalculator {
     return this
   }
 
-  calculateRemainingLife(lifeExpectancy) {
-    let mercuryLifeExpectancy = Math.round(lifeExpectancy / .24);
-    let venusLifeExpectancy = Math.round(lifeExpectancy / .62);
-    let marsLifeExpectancy = Math.round(lifeExpectancy / 1.88);
-    let jupiterLifeExpectancy = Math.round(lifeExpectancy / 11.86);
-    this.earth["remaining-life"] = Math.round(lifeExpectancy - this.earth["age"]);
+  calculateRemainingLife(lifeExpectancyResults) {
+    let mercuryLifeExpectancy = Math.round(lifeExpectancyResults / .24);
+    let venusLifeExpectancy = Math.round(lifeExpectancyResults / .62);
+    let marsLifeExpectancy = Math.round(lifeExpectancyResults / 1.88);
+    let jupiterLifeExpectancy = Math.round(lifeExpectancyResults / 11.86);
+    this.earth["remaining-life"] = Math.round(lifeExpectancyResults - this.earth["age"]);
     this.mercury["remaining-life"] = mercuryLifeExpectancy - this.mercury["age"];
     this.venus["remaining-life"] =  venusLifeExpectancy - this.venus["age"];
     this.mars["remaining-life"] = marsLifeExpectancy - this.mars["age"];
