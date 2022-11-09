@@ -1,6 +1,6 @@
 # Super Galactic Age Calculator
 
-#### A calculator that returns a user's age in Mercury, Venus, Mars, and Jupiter years. It also calculates life expectancy based on a user lifestyle survey, returns how many years a user has left on each planet, and how many years they have lived past their life expectancy per planet (if that applys).
+#### A calculator that returns a user's age in Mercury, Venus, Mars, and Jupiter years. It also calculates life expectancy based on a user lifestyle survey, returns how many years a user has left on each planet, and how many years they have lived past their life expectancy per planet (if that applies).
 
 ### [Link to Site](https://helen-lehrer.github.io/super-galactic-age-calculator)
 
